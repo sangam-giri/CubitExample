@@ -5,8 +5,11 @@ class CubitTest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(
+      home: BlocProvider(
+        create: (context) => TestCubit(),
+        child: HomePage(),
+      ),
     );
   }
 }
